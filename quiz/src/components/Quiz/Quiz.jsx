@@ -17,7 +17,7 @@ export const Quiz = () => {
     const questions = location.state.questions;
     const user = location.state.user;
 
-    const [showCard, setShowCard] = useState(false);
+    const [showCard, setShowCard] = useState(true);
     const [isTrueCard, setIsTrueCard] = useState(false);
     const [isFalseCard, setIsFalseCard] = useState(false);
     const [questionCounter, setQuestionCounter] = useState(0);
