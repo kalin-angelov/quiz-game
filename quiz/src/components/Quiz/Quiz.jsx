@@ -17,16 +17,16 @@ export const Quiz = () => {
     const questions = location.state.questions;
     const user = location.state.user;
 
-    const [showCard, setShowCard] = useState(true);
+    const [showCard, setShowCard] = useState(false);
     const [isTrueCard, setIsTrueCard] = useState(false);
     const [isFalseCard, setIsFalseCard] = useState(false);
     const [questionCounter, setQuestionCounter] = useState(0);
     const [points, setPoints] = useState(0);
     const [givenAnswers, setGivenAnswers] = useState([]);
     
-    const [victorySound] = useSound('/sound/Correct-sound.mp3');
-    const [defeatSound] = useSound('/sound/Wrong-sound.mp3');
-    const [waitingSound] = useSound('/sound/Waiting-sound.wav')
+    const [victorySound] = useSound('/sounds/Correct-sound.mp3');
+    const [defeatSound] = useSound('/sounds/Wrong-sound.mp3');
+    const [waitingSound] = useSound('/sounds/Waiting-sound.wav')
 
     let result = {
         question: questions[questionCounter].question,
