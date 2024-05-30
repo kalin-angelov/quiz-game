@@ -1,0 +1,89 @@
+@import url("https://use.fontawesome.com/releases/v6.4.0/css/all.css");
+
+/* Result Page */
+.result{
+    background-color: #000000;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.result section {
+    display: grid;
+    grid-template-columns: repeat(2, 45vw);
+    justify-content: center;
+    overflow: hidden;
+}
+
+.result h3 {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 187, 0);
+    border-radius: 30px;
+    font-size: 28px;
+}
+
+.result i{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 40px;
+}
+
+.result h2{
+    padding: 20px;
+    box-shadow: 7px 7px 10px #000000, 0px -7px 80px rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.814);
+    border: 3px solid rgb(255, 187, 0);
+    border-radius: 30%;
+    color: rgb(255, 187, 0);
+    font-weight: 100;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Play Again Button */
+.playAgain {
+    margin: 30px;
+    width: 15%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 187, 0);
+    box-shadow: 0 9px #bbbbbb;
+    transition: background-color 300ms linear;
+}
+
+.playAgain:hover{
+    background-color: rgb(255, 145, 0);
+    color: black;
+}
+
+.playAgain:active {
+    background-color: rgb(255, 145, 0);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* Quit Button */
+.quit {
+    grid-area: quit;
+    margin-bottom: 20px;
+    width: 15%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 187, 0);
+    box-shadow: 0 9px #bbbbbb;
+    transition: background-color 300ms linear;
+}
+
+.quit:hover{
+    background-color: rgb(255, 145, 0);
+    color: black;
+}
+
+.quit:active {
+    background-color: rgb(255, 145, 0);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

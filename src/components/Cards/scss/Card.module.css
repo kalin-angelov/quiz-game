@@ -1,0 +1,34 @@
+.card {
+  animation-name: rotate;
+  animation-duration: 3800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+}
+
+.cardFront {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg {
+  width: 450px;
+  height: 650px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(3600deg);
+  }
+}/*# sourceMappingURL=card.module.css.map */
