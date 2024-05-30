@@ -19,7 +19,14 @@ export const Home = () => {
     }, []);
 
     const onClickStart = () => {
-        console.log(questionsBG);
+        selected === "EN" ?
+        navigate("/quiz", {state: {
+            questions: questionsEN,
+        }})
+        : 
+        navigate("/quiz", {state: {
+            questions: questionsBG,
+        }})
     };
 
     const handleChange = (event) => {
@@ -27,7 +34,7 @@ export const Home = () => {
     };
 
     return (
-        <section className={styles.home}>
+        <section className={styles.homeSection}>
             <h1>Funny Quiz</h1>
             <form className={styles.radioButtons}>
                 <input 

@@ -19,7 +19,6 @@ function App() {
           <Route path="/404" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
     </>
   );
 };

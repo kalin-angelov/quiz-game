@@ -11,9 +11,7 @@ import { FalseCard } from "../Cards/FalseCard";
 export const Quiz = () => {
     const navigate = useNavigate();
     const location = useLocation();
-
     const questions = location.state.questions;
-    const user = location.state.user;
 
     const [showCard, setShowCard] = useState(false);
     const [isTrueCard, setIsTrueCard] = useState(false);
@@ -50,7 +48,6 @@ export const Quiz = () => {
         navigate("/result", {
             state:
             {
-                user,
                 points,
                 questions,
                 givenAnswers
@@ -98,17 +95,8 @@ export const Quiz = () => {
         }, 4500);
     };
 
-    const onCLickQuit = async (event) => {
-        event.preventDefault();
-
-        try {
-            await removeUser(user._id);
-
-            navigate("/");
-        } catch (error) {
-            console.log(error);
-        }
-
+    const onCLickQuit = () => {
+        navigate("/");
     };
 
     return (
@@ -117,53 +105,56 @@ export const Quiz = () => {
             {isTrueCard && <TrueCard/>}
             {isFalseCard && <FalseCard />}
 
-            <div className={styles.quiz}>
-                <div className={styles.headlineAndPoints}>
-                    {questions.length - 1 !== questionCounter && <p> {user.username}: {points}/{questions.length - 1}0</p>}
-                    {isTrueCard && <p>+10</p>}
-                </div>
+            <div className={styles.quizContainer}>
+                <header className={styles.header}>
+                    {questions.length - 1 !== questionCounter && <p>{points}/{questions.length - 1}0</p>}
+                    {isTrueCard && <p className={styles.plusPoint}>+10</p>}
+                </header>
                  
-                <div className={styles.question}>
-                    <p>{questions[questionCounter].question}</p>
-                    <img src={questions[questionCounter].img} alt="someImg" />
+                <div className={styles.questionContainer}>
+                    <p className={styles.question}>{questions[questionCounter].question}</p>
+                    <figure className={styles.imgContainer}>
+                        <img src={questions[questionCounter].img} alt="someImg" />
+                    </figure>
+                    
                     {questions.length - 1 !== questionCounter ?
-                        <div className={styles.answers}>
+                        <div className={styles.answersBtnContainer}>
                             {questions[questionCounter].one === true ?
-                                <button onClick={onClickIsTrue} name={questions[questionCounter].answerOne}>
+                                <button className={styles.answerBtn} onClick={onClickIsTrue} name={questions[questionCounter].answerOne}>
                                     {questions[questionCounter].answerOne}
                                 </button>
                                 :
-                                <button onClick={onClickIsFalse} name={questions[questionCounter].answerOne}>
+                                <button className={styles.answerBtn} onClick={onClickIsFalse} name={questions[questionCounter].answerOne}>
                                     {questions[questionCounter].answerOne}
                                 </button>
                             }
 
                             {questions[questionCounter].two === true ?
-                                <button onClick={onClickIsTrue} name={questions[questionCounter].answerTwo}>
+                                <button className={styles.answerBtn} onClick={onClickIsTrue} name={questions[questionCounter].answerTwo}>
                                     {questions[questionCounter].answerTwo}
                                 </button>
                                 :
-                                <button onClick={onClickIsFalse} name={questions[questionCounter].answerTwo}>
+                                <button className={styles.answerBtn} onClick={onClickIsFalse} name={questions[questionCounter].answerTwo}>
                                     {questions[questionCounter].answerTwo}
                                 </button>
                             }
 
                             {questions[questionCounter].three === true ?
-                                <button onClick={onClickIsTrue} name={questions[questionCounter].answerThree}>
+                                <button className={styles.answerBtn} onClick={onClickIsTrue} name={questions[questionCounter].answerThree}>
                                     {questions[questionCounter].answerThree}
                                 </button>
                                 :
-                                <button onClick={onClickIsFalse} name={questions[questionCounter].answerThree}>
+                                <button className={styles.answerBtn} onClick={onClickIsFalse} name={questions[questionCounter].answerThree}>
                                     {questions[questionCounter].answerThree}
                                 </button>
                             }
 
                             {questions[questionCounter].four === true ?
-                                <button onClick={onClickIsTrue} name={questions[questionCounter].answerFour}>
+                                <button className={styles.answerBtn} onClick={onClickIsTrue} name={questions[questionCounter].answerFour}>
                                     {questions[questionCounter].answerFour}
                                 </button>
                                 :
-                                <button onClick={onClickIsFalse} name={questions[questionCounter].answerFour}>
+                                <button className={styles.answerBtn} onClick={onClickIsFalse} name={questions[questionCounter].answerFour}>
                                     {questions[questionCounter].answerFour}
                                 </button>
                             }
@@ -178,7 +169,7 @@ export const Quiz = () => {
                     }
                 </div>
                 
-                <button className={styles.quit} onClick={onCLickQuit}><i className="fa-solid fa-circle-xmark"></i></button>
+                <button className={styles.quit} onClick={onCLickQuit}>Give Up</button>
             </div>
         </>
     );

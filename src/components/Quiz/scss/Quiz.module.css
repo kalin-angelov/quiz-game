@@ -1,147 +1,113 @@
 /* Quiz Page */
-.quiz {
-  padding-top: 5px;
-  text-align: center;
-  height: 92vh;
-}
-
-/* Headline and Points */
-.headlineAndPoints {
-  margin: 80px 20px;
-}
-
-.headlineAndPoints p {
-  position: absolute;
-  top: 0;
-  width: 400px;
-  background: rgb(255, 187, 0);
-  border-radius: 30px;
-  border: 2px solid black;
-  font-size: 40px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-/* Question */
-.question {
-  display: grid;
-  grid-template-columns: 40vw 40vw;
-  grid-template-rows: auto;
-  grid-template-areas: "question question " "img answers";
-  grid-column-gap: 5vw;
-  grid-row-gap: 5vh;
-  justify-content: center;
-  margin-bottom: 80px;
-}
-
-.question p {
-  grid-area: question;
-  background: rgb(255, 187, 0);
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border: 2px solid black;
-  font-size: 40px;
-}
-
-.question img {
-  grid-area: img;
-  width: 43vw;
-  height: 50vh;
-  border-radius: 30px;
-  box-sizing: border-box;
-  box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(175, 174, 174);
-}
-
-/* Answers Buttons */
-.answers {
-  grid-area: answers;
+.quizContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
+  /* Headline and Points */
+  /* Question */
+  /* Result*/
+  /* Quit Button */
 }
-
-.answers button {
-  grid-area: quit;
-  margin-bottom: 20px;
-  width: 40vh;
-  height: 6vh;
+.quizContainer .header {
+  width: 250px;
+  height: 50px;
+  border: 2px solid whitesmoke;
+  color: black;
+  background: rgb(255, 187, 0);
   border-radius: 10px;
-  font-size: 28px;
-  cursor: pointer;
+}
+.quizContainer .header p {
+  padding: 5px 0px;
+  text-align: center;
+  font-size: 32px;
+}
+.quizContainer .questionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  /* Answers Buttons */
+}
+.quizContainer .questionContainer .question {
+  background: rgb(255, 187, 0);
+  width: 325px;
+  height: 100px;
+  padding: 10px 0px;
+  text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 2px solid whitesmoke;
+  font-size: 24px;
+}
+.quizContainer .questionContainer .imgContainer {
+  width: 350px;
+  height: 240px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 10px #000000;
+}
+.quizContainer .questionContainer .imgContainer img {
+  width: inherit;
+  height: inherit;
+}
+.quizContainer .questionContainer .answersBtnContainer {
+  display: grid;
+  grid-template-areas: "buttonOne buttonTwo" "buttonThree buttonFour";
+  grid-template-columns: 165px 165px;
+  grid-template-rows: 80px 80px;
+  gap: 15px;
+}
+.quizContainer .questionContainer .answersBtnContainer .answerBtn {
+  border-radius: 10px;
+  font-size: 20px;
   background-color: rgb(255, 187, 0);
+  border: 2px solid whitesmoke;
   box-shadow: 0 9px #bbbbbb;
   transition: background-color 300ms linear;
 }
-
-.answers button:hover {
-  background-color: rgb(255, 145, 0);
-}
-
-.answers button:active {
+.quizContainer .questionContainer .answersBtnContainer .answerBtn:active {
   background-color: rgb(255, 145, 0);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-/* Result*/
-.result {
-  margin-top: 100px;
+.quizContainer .result {
+  margin-top: 0px;
 }
-
-.result p {
-  grid-area: question;
+.quizContainer .result p {
   background: rgb(255, 187, 0);
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 30px;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   font-size: 40px;
-  font-family: "Courier New", Courier, monospace;
 }
-
-.result button {
-  grid-area: quit;
-  margin-bottom: 20px;
+.quizContainer .result button {
   width: 30vh;
   height: 10vh;
   border-radius: 10px;
   font-size: 28px;
-  cursor: pointer;
   background-color: rgb(255, 187, 0);
   box-shadow: 0 9px #bbbbbb;
   transition: background-color 300ms linear;
 }
-
-.result button:hover {
-  background-color: rgb(255, 145, 0);
-}
-
-.result button:active {
-  background-color: rgb(255, 145, 0);
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-/* Quit Button */
-.quit {
-  grid-area: quit;
-  margin-bottom: 20px;
-  width: 15%;
+.quizContainer .quit {
+  width: 120px;
   height: 50px;
-  border-radius: 50px;
-  font-size: 30px;
-  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid whitesmoke;
+  font-size: 21px;
   background-color: rgb(255, 187, 0);
   box-shadow: 0 9px #bbbbbb;
   transition: background-color 300ms linear;
 }
-
-.quit:hover {
+.quizContainer .quit:hover {
   background-color: rgb(255, 145, 0);
   color: black;
 }
-
-.quit:active {
+.quizContainer .quit:active {
   background-color: rgb(255, 145, 0);
   box-shadow: 0 5px #666;
   transform: translateY(4px);

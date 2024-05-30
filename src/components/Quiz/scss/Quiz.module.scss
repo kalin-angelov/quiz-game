@@ -1,150 +1,133 @@
-/* Quiz Page */
-.quiz {
-    padding-top: 5px;
-    text-align: center;
-    height: 92vh;
-}
+$orange: rgb(255, 187, 0);
+$border: 2px solid whitesmoke;
 
-/* Headline and Points */
-.headlineAndPoints {
-    margin: 80px 20px
-}
-
-.headlineAndPoints p {
-    position: absolute;
-    top: 0;
-    width: 400px;
-    background: rgb(255, 187, 0);
-    border-radius: 30px;
-    border: 2px solid black;
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Question */
-.question {
-    display: grid;
-    grid-template-columns: 40vw 40vw;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "question question "
-    "img answers";
-    grid-column-gap: 5vw;
-    grid-row-gap: 5vh;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-.question p {
-    grid-area: question;
-    background: rgb(255, 187, 0);
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border: 2px solid black;
-    font-size: 40px;
-}
-
-.question img {
-    grid-area: img;
-    width: 43vw;
-    height: 50vh;
-    border-radius: 30px;
-    box-sizing: border-box;
-    box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(175, 174, 174);
-}
-
-/* Answers Buttons */
-.answers {
-    grid-area: answers;
+@mixin flex {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.answers button {
-    grid-area: quit;
-    margin-bottom: 20px;
-    width: 40vh;
-    height: 6vh;
-    border-radius: 10px;
-    font-size: 28px;
-    cursor: pointer;
-    background-color: rgb(255, 187, 0);
-    box-shadow: 0 9px #bbbbbb;
-    transition: background-color 300ms linear;
-}
+/* Quiz Page */
+.quizContainer {
+    @include flex();
+    gap: 20px;
 
-.answers button:hover {
-    background-color: rgb(255, 145, 0);
-}
+    /* Headline and Points */
+    .header {
+        width: 250px;
+        height: 50px;
+        border: $border;
+        color: black;
+        background: $orange;
+        border-radius: 10px;
+        p {
+            padding: 5px 0px;
+            text-align: center;
+            font-size: 32px;
+        }
+    }
 
-.answers button:active {
-    background-color: rgb(255, 145, 0);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
+    /* Question */
+    .questionContainer {
+        @include flex();
+        gap: 15px;
 
-/* Result*/
-.result {
-    margin-top: 100px;
-}
+        .question  {
+            background: $orange;
+            width: 325px;
+            height: 100px;
+            padding: 10px 0px;
+            text-align: center;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border: $border;
+            font-size: 24px;
+        }
 
-.result p {
-    grid-area: question;
-    background: rgb(255, 187, 0);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 30px;
-    border: 2px solid black;
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-}
+        .imgContainer {
+            width: 350px;
+            height: 240px;
+            border-radius: 30px;
+            box-sizing: border-box;
+            box-shadow: 7px 7px 10px #000000;
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
 
-.result button {
-    grid-area: quit;
-    margin-bottom: 20px;
-    width: 30vh;
-    height: 10vh;
-    border-radius: 10px;
-    font-size: 28px;
-    cursor: pointer;
-    background-color: rgb(255, 187, 0);
-    box-shadow: 0 9px #bbbbbb;
-    transition: background-color 300ms linear;
-}
+        /* Answers Buttons */
+        .answersBtnContainer {
+            display: grid;
+            grid-template-areas: 
+            "buttonOne buttonTwo"
+            "buttonThree buttonFour";
+            grid-template-columns: 165px 165px;
+            grid-template-rows: 80px 80px;
+            gap: 15px;
 
-.result button:hover {
-    background-color: rgb(255, 145, 0);
-}
+            .answerBtn {
+                border-radius: 10px;
+                font-size: 20px;
+                background-color: $orange;
+                border: $border;
+                box-shadow: 0 9px #bbbbbb;
+                transition: background-color 300ms linear;
+                // &:hover {
+                //     background-color: rgb(255, 145, 0);
+                // }
+                &:active {
+                    background-color: rgb(255, 145, 0);
+                    box-shadow: 0 5px #666;
+                    transform: translateY(4px);
+                }
+            }
+        }
+    }
 
-.result button:active {
-    background-color: rgb(255, 145, 0);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
+    /* Result*/
+    .result {
+        margin-top: 0px;
+        p {
+            background: $orange;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 30px;
+            border: $border;
+            font-size: 40px;
+        }
 
-/* Quit Button */
-.quit {
-    grid-area: quit;
-    margin-bottom: 20px;
-    width: 15%;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 30px;
-    cursor: pointer;
-    background-color: rgb(255, 187, 0);
-    box-shadow: 0 9px #bbbbbb;
-    transition: background-color 300ms linear;
-}
+        button {
+            width: 30vh;
+            height: 10vh;
+            border-radius: 10px;
+            font-size: 28px;
+            background-color: rgb(255, 187, 0);
+            box-shadow: 0 9px #bbbbbb;
+            transition: background-color 300ms linear;
+        }
+    }
 
-.quit:hover{
-    background-color: rgb(255, 145, 0);
-    color: black;
-}
+    /* Quit Button */
+    .quit {
+        width: 120px;
+        height: 50px;
+        border-radius: 10px;
+        border: $border;
+        font-size: 21px;
+        background-color:$orange;
+        box-shadow: 0 9px #bbbbbb;
+        transition: background-color 300ms linear;
+        &:hover {
+            background-color: rgb(255, 145, 0);
+            color: black;
+        }
+        &:active {
+            background-color: rgb(255, 145, 0);
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    }
 
-.quit:active {
-    background-color: rgb(255, 145, 0);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
 }

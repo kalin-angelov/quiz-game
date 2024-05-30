@@ -1,24 +1,24 @@
-.home {
+.homeSection {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
 }
-.home h1 {
+.homeSection h1 {
   color: aliceblue;
   font-size: 40px;
 }
-.home .radioButtons {
+.homeSection .radioButtons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.home .radioButtons label {
+.homeSection .radioButtons label {
   padding: 10px;
   font-size: 22px;
 }
-.home .startBtn {
+.homeSection .startBtn {
   width: 250px;
   height: 40px;
   border-radius: 50px;
@@ -27,11 +27,11 @@
   box-shadow: 0px 9px #bbbbbb;
   transition: background-color 300ms linear;
 }
-.home .startBtn:hover {
+.homeSection .startBtn:hover {
   background-color: rgb(255, 145, 0);
   color: black;
 }
-.home .startBtn:active {
+.homeSection .startBtn:active {
   background-color: rgb(255, 145, 0);
   box-shadow: 0px 5px #666;
   transform: translateY(4px);

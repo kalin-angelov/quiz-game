@@ -1,10 +1,17 @@
-.card {
+.mainCard {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   animation-name: rotate;
   animation-duration: 3800ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.card {
   position: fixed;
-  z-index: 9999999;
+  z-index: 1;
   width: 100%;
   height: 100%;
 }
@@ -31,4 +38,4 @@
   to {
     transform: rotateY(3600deg);
   }
-}/*# sourceMappingURL=card.module.css.map */
+}/*# sourceMappingURL=Card.module.css.map */

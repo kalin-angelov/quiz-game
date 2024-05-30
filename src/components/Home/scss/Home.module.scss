@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.home {
+.homeSection {
     @include flex();
     flex-direction: column;
     gap: 20px;
