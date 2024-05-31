@@ -1,34 +1,32 @@
 .page404 {
-  padding-top: 15%;
-  padding-bottom: 30%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px;
   color: white;
 }
-
 .page404 h1 {
   font-size: 60px;
 }
-
 .page404 p {
-  font-size: 50px;
-}
-
-.page404 button {
-  width: 20%;
-  height: 50px;
   font-size: 25px;
-  cursor: pointer;
+  text-align: center;
+}
+.page404 button {
+  width: 120px;
+  height: 50px;
+  font-size: 21px;
   border-radius: 50px;
   background-color: rgb(255, 187, 0);
   box-shadow: 0 9px #bbbbbb;
   transition: background-color 300ms linear;
 }
-
 .page404 button:hover {
   background-color: rgb(255, 145, 0);
   color: black;
 }
-
 .page404 button:active {
   background-color: rgb(255, 145, 0);
   box-shadow: 0 5px #666;

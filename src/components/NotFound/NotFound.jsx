@@ -5,16 +5,11 @@ import { useNavigate } from "react-router-dom";
 export const NotFound = () => {
     const navigate = useNavigate();
 
-    const onClickGoBack = () => {
-        navigate("/");
-    };
-
     return (
-        <div className={styles.page404}>
+        <article className={styles.page404}>
             <h1>Oops!</h1>
-            <p>I think we have something broken</p>
-            <p>Can we try again?</p>
-            <button onClick={onClickGoBack}>Go Back</button>
-        </div>
-    )
+            <p>I don't know were you are trying to go, but this is not the correct path</p>
+            <button onClick={() => {navigate("/")}}>Go Back</button>
+        </article>
+    );
 }

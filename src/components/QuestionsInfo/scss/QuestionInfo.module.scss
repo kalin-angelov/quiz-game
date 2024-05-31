@@ -1,50 +1,37 @@
+$border: 2px solid black;
+
 /* Question Info Page */
 .questionsInfo {
-    margin: 40px;
-    box-sizing: border-box;
-    border: 5px solid rgb(255, 187, 0);
-    border-radius: 30px;
-}
+    border: $border;
+    background-color: black;
+    width: 365px;
+    height: 465px;
 
-.questionsInfo h2 {
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    font-weight: 100;
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    .question {
+        width: 360px;
+        color: black;
+        background: rgb(255, 187, 0);
+        font-size: 21px;
+       border-radius: 0px;
+        box-shadow: unset;
+        border: unset;
+    }
 
-.questionsInfo p {
-    padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
-    background: rgb(255, 187, 0);
-    border-radius: 30px;
-    font-size: 28px;
-}
+    figure {
+        width: 360px;
+        height: 240px;
+        img {
+            width: inherit;
+            height: inherit;
+        }
+    }
 
-.questionsInfo img {
-    height: 250px;
-    width: 70%;
-    border-radius: 11px;
-    box-sizing: border-box;
-    box-shadow: 7px 7px 10px #000000, -7px -7px 10px rgb(175, 174, 174);
-}
-
-/* Question Info Buttons */
-.questionsInfo button {
-    padding: 20px;
-    width: 40%;
-    box-shadow: 7px 7px 10px #000000;
-    border-radius: 20px;
-    font-size: 22px;
-    font-style: italic;
-}
-
-.answers {
-    padding-top: 30px;
-    margin: 10px auto;
-    height: 165px;
-    margin-top: 10px;
+    /* Question Info Buttons */
+    .answers {
+        button {
+            padding: 25px;
+            width: 180.5px;
+            font-size: 14px;
+        }
+    }
 }

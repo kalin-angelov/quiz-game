@@ -37,19 +37,17 @@ $border: 2px solid whitesmoke;
             background: $orange;
             width: 325px;
             height: 100px;
-            padding: 10px 0px;
+            padding: 10px;
             text-align: center;
             border-top-right-radius: 15px;
             border-bottom-left-radius: 15px;
             border: $border;
-            font-size: 24px;
+            font-size: 21px;
         }
 
         .imgContainer {
             width: 350px;
             height: 240px;
-            border-radius: 30px;
-            box-sizing: border-box;
             box-shadow: 7px 7px 10px #000000;
             img {
                 width: inherit;
@@ -69,14 +67,11 @@ $border: 2px solid whitesmoke;
 
             .answerBtn {
                 border-radius: 10px;
-                font-size: 20px;
+                font-size: 18px;
                 background-color: $orange;
                 border: $border;
                 box-shadow: 0 9px #bbbbbb;
                 transition: background-color 300ms linear;
-                // &:hover {
-                //     background-color: rgb(255, 145, 0);
-                // }
                 &:active {
                     background-color: rgb(255, 145, 0);
                     box-shadow: 0 5px #666;
@@ -84,30 +79,23 @@ $border: 2px solid whitesmoke;
                 }
             }
         }
-    }
 
-    /* Result*/
-    .result {
-        margin-top: 0px;
-        p {
-            background: $orange;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 30px;
-            border: $border;
-            font-size: 40px;
-        }
-
-        button {
-            width: 30vh;
-            height: 10vh;
-            border-radius: 10px;
-            font-size: 28px;
-            background-color: rgb(255, 187, 0);
-            box-shadow: 0 9px #bbbbbb;
-            transition: background-color 300ms linear;
+        /* Result*/
+        .result {
+            button {
+                width: 160px;
+                height: 50px;
+                border-radius: 10px;
+                font-size: 28px;
+                background-color: $orange;
+                border: $border;
+                box-shadow: 0 9px #bbbbbb;
+                transition: background-color 300ms linear;
+            }
         }
     }
+
+   
 
     /* Quit Button */
     .quit {
@@ -119,10 +107,6 @@ $border: 2px solid whitesmoke;
         background-color:$orange;
         box-shadow: 0 9px #bbbbbb;
         transition: background-color 300ms linear;
-        &:hover {
-            background-color: rgb(255, 145, 0);
-            color: black;
-        }
         &:active {
             background-color: rgb(255, 145, 0);
             box-shadow: 0 5px #666;
@@ -130,4 +114,93 @@ $border: 2px solid whitesmoke;
         }
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    /* Quiz Page */
+    .quizContainer {
+
+        /* Headline and Points */
+        .header {
+            width: 400px;
+            height: 50px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            align-self: self-start;
+            p {
+                font-size: 32px;
+            }
+        }
+
+        /* Question */
+        .questionContainer {
+            display: grid;
+            grid-template-areas:
+            "img question"
+            "button button";
+            align-items: center;
+            justify-content: center;
+            grid-column-gap: 30px;
+            grid-template-columns: 400px 400px;
+            grid-template-rows: 250px 250px;
+
+            .question  {
+                grid-area: question;
+                width: 400px;
+                height: 260px;
+                font-size: 30px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                box-shadow: 7px 7px 10px #000000;
+            }
+
+            .imgContainer {
+                grid-area: img;
+                width: 400px;
+                height: 260px;
+                box-shadow: 7px 7px 10px #000000;
+                img {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+
+            /* Answers Buttons */
+            .answersBtnContainer {
+                grid-area: button;
+                justify-content: center;
+                grid-template-columns: 400px 400px;
+                grid-template-rows: 100px 100px;
+                gap: 20px;
+
+                .answerBtn {
+                    font-size: 30px;
+                    &:hover {
+                        background-color: rgb(255, 145, 0);
+                    }
+                }
+            }
+
+            .result {
+                width: 200px;
+                grid-area: button;
+                justify-self: center;
+                button {
+                    width: inherit;
+                }
+            }
+        }
+
+        /* Quit Button */
+        .quit {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            &:hover {
+                background-color: rgb(255, 145, 0);
+                color: black;
+            }
+        }
+
+    }
 }

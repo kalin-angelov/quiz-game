@@ -19,9 +19,11 @@ export const QuestionsInfo = ({
     }
 
     return (
-        <div className={styles.questionsInfo}>
-            <p>{questionAndAnswer.question}</p>
-            <img src={questionAndAnswer.img} alt="someImg" />
+        <article className={styles.questionsInfo}>
+            <h1 className={styles.question}>{questionAndAnswer.question}</h1>
+            <figure>
+                <img src={questionAndAnswer.img} alt="someImg" />
+            </figure>
             <div className={styles.answers}>
                 <button
                     name={questionAndAnswer.answerA}
@@ -40,6 +42,6 @@ export const QuestionsInfo = ({
                     style={correctOrNot(questionAndAnswer.answerD)}
                 >{questionAndAnswer.answerD}</button>
             </div>
-        </div>
+        </article>
     )
 };

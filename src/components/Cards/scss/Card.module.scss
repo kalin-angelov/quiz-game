@@ -21,16 +21,15 @@
 .cardFront{
     width: 100%;
     position: absolute;
-    left: 0;
-    top: 20%;
+    top: calc((100vh - 450px) / 2);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .cardImg {
-    width: 450px;
-    height: 650px;
+    width: 300px;
+    height: 450px;
 }
 
 @keyframes rotate {
@@ -39,5 +38,16 @@
     }
     to {
         transform:rotateY(3600deg);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cardFront {
+        top: calc((100vh - 560px) / 2 );
+    }
+
+    .cardImg {
+        width: 360px;
+        height: 560px;
     }
 }

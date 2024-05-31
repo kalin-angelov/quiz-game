@@ -107,8 +107,12 @@ export const Quiz = () => {
 
             <div className={styles.quizContainer}>
                 <header className={styles.header}>
-                    {questions.length - 1 !== questionCounter && <p>{points}/{questions.length - 1}0</p>}
-                    {isTrueCard && <p className={styles.plusPoint}>+10</p>}
+                    {questions.length - 1 !== questionCounter &&
+                        isTrueCard ?
+                        <p className={styles.plusPoint}>+10</p>
+                        : 
+                        <p>{points}/{questions.length - 1}0</p>
+                    }
                 </header>
                  
                 <div className={styles.questionContainer}>
@@ -161,7 +165,6 @@ export const Quiz = () => {
                         </div>
                         :
                         <div className={styles.result}>
-                            <p> {user.username}: {points}/{questions.length - 1}0</p>
                             <button onClick={onClickResult} name={questions[questionCounter].answerOne}>
                                 {questions[questionCounter].answerOne}
                             </button>

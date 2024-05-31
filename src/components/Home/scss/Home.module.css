@@ -18,6 +18,9 @@
   padding: 10px;
   font-size: 22px;
 }
+.homeSection p {
+  color: aliceblue;
+}
 .homeSection .startBtn {
   width: 250px;
   height: 40px;
