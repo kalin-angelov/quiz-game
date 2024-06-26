@@ -21,6 +21,7 @@ This fun little game was inspired and created for my family, since we always lov
 - `React`
 - `react-router-dom`- for navigation between the pages
 - `use-sound` - for sound effect
+- `SASS` - for styling the app 
 
 ## Link
 -Live site URL: [Click here if you want to test your knowledge](https://quiz-game-chi-two.vercel.app/)
