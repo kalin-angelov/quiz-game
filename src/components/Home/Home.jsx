@@ -35,7 +35,9 @@ export const Home = () => {
 
     return (
         <section className={styles.homeSection}>
-            <h1>Funny Quiz</h1>
+            <figure>
+                <img src="/images/logo.png" width={375} alt="logo" />
+            </figure>
             <form className={styles.radioButtons}>
                 <input 
                     type="radio"
@@ -59,7 +61,9 @@ export const Home = () => {
             <button 
                 className={styles.startBtn} 
                 onClick={onClickStart}
-            >Lets get started</button>
+            >
+                Lets get started
+            </button>
         </section>
     );
 };
