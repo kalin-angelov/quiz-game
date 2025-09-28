@@ -24,4 +24,4 @@ This fun little game was inspired and created for my family, since we always lov
 - `SASS` - for styling the app 
 
 ## Link
--Live site URL: [Click here if you want to test your knowledge](https://quiz-game-rouge-iota.vercel.app/quiz)
+-Live site URL: [Click here if you want to test your knowledge](https://quiz-game-rouge-iota.vercel.app/)
