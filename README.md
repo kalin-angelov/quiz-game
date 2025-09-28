@@ -6,15 +6,15 @@ This fun little game was inspired and created for my family, since we always lov
 
 - Main Page
 
-![Screenshot](./public/screenshot/screenshot-main-page.png)
+![Screenshot](./public/screenshot/screenshot-1.png)
 
 - for desktop (>= 1024px)
 
-![Screenshot desktop](./public/screenshot/screenshot-desktop.png)
+![Screenshot desktop](./public/screenshot/screenshot-2.png)
 
 - for mobile (<= 425px)
 
-![Screenshot mobile](./public/screenshot/screenshot-mobile.png)
+![Screenshot mobile](./public/screenshot/screenshot-3.png)
 
 ## The app is created with:
 
@@ -24,4 +24,4 @@ This fun little game was inspired and created for my family, since we always lov
 - `SASS` - for styling the app 
 
 ## Link
--Live site URL: [Click here if you want to test your knowledge](https://quiz-game-chi-two.vercel.app/)
+-Live site URL: [Click here if you want to test your knowledge](https://quiz-game-rouge-iota.vercel.app/quiz)
