@@ -172,7 +172,7 @@ export const Quiz = () => {
                     }
                 </div>
                 
-                <button className={styles.quit} onClick={onCLickQuit}>Give Up</button>
+                {questionCounter !== 20 ? <button className={styles.quit} onClick={onCLickQuit}>Give Up</button> : null}
             </div>
         </>
     );
