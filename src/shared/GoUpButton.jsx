@@ -30,7 +30,7 @@ export const GoUpButton = () => {
 
     return(
         <div className={styles.goUpContainer}>
-            {showBtn && <button type="button" className={styles.goUp} onClick={goUp}>Up</button>}
+            {showBtn && <button type="button" className={styles.goUp} onClick={goUp}><i className="fa-solid fa-arrow-up"></i></button>}
         </div>
     );
 };
