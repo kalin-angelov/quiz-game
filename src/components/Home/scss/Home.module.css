@@ -5,10 +5,6 @@
   flex-direction: column;
   gap: 20px;
 }
-.homeSection h1 {
-  color: aliceblue;
-  font-size: 40px;
-}
 .homeSection .radioButtons {
   display: flex;
   align-items: center;
@@ -22,20 +18,45 @@
   color: aliceblue;
 }
 .homeSection .startBtn {
-  width: 250px;
-  height: 40px;
-  border-radius: 50px;
-  font-size: 20px;
-  background-color: rgb(255, 187, 0);
-  box-shadow: 0px 9px #bbbbbb;
-  transition: background-color 300ms linear;
+  background-color: #ffc400;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 3rem;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none #000000 solid;
+          text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-.homeSection .startBtn:hover {
-  background-color: rgb(255, 145, 0);
-  color: black;
+.homeSection .startBtn:focus {
+  outline: 0;
 }
-.homeSection .startBtn:active {
-  background-color: rgb(255, 145, 0);
-  box-shadow: 0px 5px #666;
-  transform: translateY(4px);
+.homeSection .startBtn:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+.homeSection .startBtn:hover:after {
+  bottom: 2px;
+  left: 2px;
 }/*# sourceMappingURL=Home.module.css.map */
